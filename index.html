@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/5832/5832440.png" type="image/x-icon">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Vertex Systems and Software">
+    <meta property="og:description" content="We develop innovative software and systems solutions.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/128/5832/5832440.png">
+    <meta property="og:url" content="https://vertexsystems.com">
+    <meta property="og:type" content="website">
+
+    <!-- Theme Color for Dark Theme -->
+    <meta name="theme-color" content="#000000">
+    <style>
+        :root {
+            --font-main: 'Poppins', sans-serif;
+            --background-color: #f7f7f7;
+            --text-color: #333;
+            --accent-color: #25D366;
+            --accent-hover-color: #1ebf5f;
+            --button-padding: 10px 20px;
+            --button-radius: 10px;
+            --header-margin-bottom: 20px;
+            --catalog-gap: 20px;
+            --catalog-item-background: #000;
+            --catalog-item-radius: 10px;
+            --catalog-item-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            --catalog-item-padding: 20px;
+            --catalog-item-color: white;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 40%;
+                max-width: 1200px;
+            }
+
+            .empresa-nome {
+                white-space: nowrap;
+            }
+        }
+
+
+
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: var(--header-margin-bottom);
+        }
+
+        .logo {
+            margin-left: 4em;
+        }
+
+        @media (min-width: 768px) {
+            .logo {
+                margin-left: 35em;
+            }
+        }
+
+        .logo {
+            width: 96px;
+            height: 96px;
+        }
+
+        .empresa-nome {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2e466e;
+            text-align: center;
+        }
+
+        .description {
+            text-align: justify;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-right: auto;
+        }
+
+        .whatsapp-btn {
+            position: relative;
+            left: 0;
+            background-color: var(--catalog-item-background);
+            color: white;
+            padding: var(--button-padding);
+            border-radius: var(--button-radius);
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-left: 0;
+            display: inline-block;
+        }
+
+        .whatsapp-btn i {
+            margin-right: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: var(--accent-hover-color);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .catalog-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .catalog {
+            display: flex;
+            gap: var(--catalog-gap);
+            overflow-x: hidden;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 900px;
+            scroll-behavior: smooth;
+            margin-bottom: 20px;
+        }
+
+        .catalog-item {
+            min-width: 280px;
+            max-width: 300px;
+            background-color: var(--catalog-item-background);
+            border-radius: var(--catalog-item-radius);
+            box-shadow: var(--catalog-item-shadow);
+            text-align: center;
+            padding: var(--catalog-item-padding);
+            flex-shrink: 0;
+            color: var(--catalog-item-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .catalog-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            margin-top: 2em;
+        }
+
+        .catalog-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .catalog-item p {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 20px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        .catalog-item a {
+            display: inline-block;
+            padding: var(--button-padding);
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-bottom: 5px;
+        }
+
+        .catalog-item a:hover {
+            background-color: #ccc;
+        }
+
+        .scroll-btn-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .scroll-btn {
+            background-color: var(--catalog-item-background);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-btn:hover {
+            background-color: #1f3553;
+        }
+
+        .scroll-btn:active {
+            transform: scale(0.9);
+            background-color: #1f3553;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .scroll-btn:hover {
+            background-color: #1f3553;
+            transform: scale(1.05);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        @media (max-width: 768px) {
+            .scroll-btn-container {
+                flex-direction: row;
+            }
+
+            .empresa-nome {
+                font-size: 1.5em;
+            }
+        }
+
+        .credits {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #2e466e;
+            /* Darker color for the text */
+        }
+
+        .credits strong {
+            color: #25D366;
+            /* Accent color for the company name */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Cabeçalho -->
+        <div class="header">
+            <h1 class="empresa-nome">Vn Informática</h1>
+            <img src="https://static.keepo.io/users/940d5485-d5bb-4ce9-a65b-d7162a2f7685/sites/0e9a1e12-03dd-4e3e-8bf7-293210c9acc3/e4fe133c-6c7b-40da-8760-337465c5c467-cropped.png"
+                alt="Logo" class="logo">
+        </div>
+
+        <p class="description">
+            De placa de vídeo até periféricos para o seu computador, temos o que você precisa para montar o seu PC,
+            seja gamer ou para trabalhar e dar aquele tão sonhado upgrade! Fale conosco no WhatsApp!
+        </p>
+
+        <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos"
+            class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Fale comigo no WhatsApp
+        </a>
+
+        <h2>Catálogo</h2>
+
+        <!-- Catálogo -->
+        <div class="catalog-container">
+            <div class="catalog" id="catalog">
+                <!-- Item 1 -->
+                <div class="catalog-item">
+                    <img src="https://static.keepo.io/users/940d5485-d5bb-4ce9-a65b-d7162a2f7685/sites/0e9a1e12-03dd-4e3e-8bf7-293210c9acc3/78429641-dc91-4b05-83ae-b2bf1e20dbf0-cropped.jpeg"
+                        alt="Produto 1">
+                    <h3>Pc Gamer</h3>
+                    <p>Encontre os melhores notebooks gamer aqui.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20notebooks%20gamer"
+                        target="_blank">Quero saber mais</a>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="catalog-item">
+                    <img src="https://static.keepo.io/users/940d5485-d5bb-4ce9-a65b-d7162a2f7685/sites/0e9a1e12-03dd-4e3e-8bf7-293210c9acc3/c709d7aa-a5c0-4b48-ae5a-6cf4e980ad8e-cropped.png"
+                        alt="Produto 2">
+                    <h3>Notebook</h3>
+                    <p>Intel ou AMD? Encontre os melhores processadores.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20processadores"
+                        target="_blank">Quero saber mais</a>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="catalog-item">
+                    <img src="https://s.zst.com.br/cms-assets/2022/02/16230837615786827.webp" alt="Produto 3">
+                    <h3>Placa mãe</h3>
+                    <p>Encontre as melhores placas mãe para seu setup.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20placas%20mãe"
+                        target="_blank">Quero saber mais</a>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="catalog-item">
+                    <img src="https://ergo2play.com/cdn/shop/articles/M314_1080x.jpg?v=1633105598" alt="Produto 4">
+                    <h3>Periféricos</h3>
+                    <p>Mouses, teclados e outros periféricos de alta qualidade.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20periféricos"
+                        target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+
+            <!-- Botões de rolagem abaixo -->
+            <div class="scroll-btn-container">
+                <button class="scroll-btn left" onclick="scrollCatalog(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn right" onclick="scrollCatalog(1)"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <footer class="credits">
+                <p>Developed by <strong>Vertex Systems and Software</strong></p>
+            </footer>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Função para rolar o catálogo
+        function scrollCatalog(direction) {
+            const catalog = document.getElementById('catalog');
+            const itemWidth = document.querySelector('.catalog-item').offsetWidth + 20; // Include the gap between items
+            catalog.scrollBy({
+                left: direction * itemWidth, // Scroll by exactly one item width
+                behavior: 'smooth'
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
