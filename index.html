@@ -238,9 +238,10 @@
         }
 
         .scroll-btn {
-            background-color: var(--catalog-item-background);
+            background-color: transparent;
             color: white;
-            border: none;
+            border: 3px solid black;
+            /* border: none; */
             padding: 10px 15px;
             cursor: pointer;
             border-radius: 50%;
@@ -249,7 +250,7 @@
         }
 
         .scroll-btn:hover {
-            background-color: #1f3553;
+            background-color: #eeeeee;
         }
 
         .scroll-btn:active {
@@ -345,10 +346,14 @@
 
             <!-- Botões de rolagem abaixo -->
             <div class="scroll-btn-container">
-                <button class="scroll-btn left" onclick="scrollCatalog(-1)"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-btn right" onclick="scrollCatalog(1)"><i
-                        class="fas fa-chevron-right"></i></button>
+                <button class="scroll-btn left" onclick="scrollCatalog(-1)">
+                    <img src="left-arrow-svgrepo-com.svg?text=%3C" alt="Esquerda" width="20" height="20">
+                </button>
+                <button class="scroll-btn right" onclick="scrollCatalog(1)">
+                    <img src="right-arrow-svgrepo-com.svg?text=%3E" alt="Direita" width="20" height="20">
+                </button>
             </div>
+
 
             <footer class="credits">
                 <p>Developed by <strong>Vertex Systems and Software</strong></p>
