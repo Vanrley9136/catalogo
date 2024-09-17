@@ -62,7 +62,6 @@
             scroll-behavior: smooth;
         }
 
-
         * {
             margin: 0;
             padding: 0;
@@ -90,32 +89,16 @@
                 width: 40%;
                 max-width: 1200px;
             }
-
-            .empresa-nome {
-                white-space: nowrap;
-            }
         }
 
-
-
+        /* Centering the logo and company name */
         .header {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            text-align: center;
             margin-bottom: var(--header-margin-bottom);
         }
 
         .logo {
-            margin-left: 4em;
-        }
-
-        @media (min-width: 768px) {
-            .logo {
-                margin-left: 35em;
-            }
-        }
-
-        .logo {
+            margin: 0 auto;
             width: 96px;
             height: 96px;
         }
@@ -124,7 +107,7 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #2e466e;
-            text-align: center;
+            margin-top: 10px;
         }
 
         .description {
@@ -137,8 +120,6 @@
         }
 
         .whatsapp-btn {
-            position: relative;
-            left: 0;
             background-color: var(--catalog-item-background);
             color: white;
             padding: var(--button-padding);
@@ -147,7 +128,6 @@
             font-weight: bold;
             text-decoration: none;
             transition: background-color 0.3s ease;
-            margin-left: 0;
             display: inline-block;
         }
 
@@ -271,19 +251,8 @@
         }
 
         .scroll-btn:hover {
-            background-color: #1f3553;
             transform: scale(1.05);
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-
-        @media (max-width: 768px) {
-            .scroll-btn-container {
-                flex-direction: row;
-            }
-
-            .empresa-nome {
-                font-size: 1.5em;
-            }
+            transition: transform 0.2s ease;
         }
 
         .credits {
@@ -293,12 +262,10 @@
             font-size: 1rem;
             font-weight: bold;
             color: #2e466e;
-            /* Darker color for the text */
         }
 
         .credits strong {
             color: #25D366;
-            /* Accent color for the company name */
         }
     </style>
 </head>
@@ -308,9 +275,9 @@
     <div class="container">
         <!-- Cabeçalho -->
         <div class="header">
-            <h1 class="empresa-nome">Vn Informática</h1>
             <img src="https://static.keepo.io/users/940d5485-d5bb-4ce9-a65b-d7162a2f7685/sites/0e9a1e12-03dd-4e3e-8bf7-293210c9acc3/e4fe133c-6c7b-40da-8760-337465c5c467-cropped.png"
                 alt="Logo" class="logo">
+            <h1 class="empresa-nome">Vn Informática</h1>
         </div>
 
         <p class="description">
